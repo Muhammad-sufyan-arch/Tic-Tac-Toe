@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+ </head>
+<body>
+
+  <div class="header">
+    <h1>TIC-TAC-TOE</h1>
+    <p class="subtitle">Two-player · Classic arcade</p>
+  </div>
+
+  <div class="turn-indicator x-turn" id="turnIndicator">
+    <span class="turn-dot"></span>
+    <span>Player&nbsp;</span>
+    <span class="mark" id="turnMark">X</span>
+    <span>'s turn</span>
+  </div>
+
+  <div class="board-wrap">
+    <div class="board" id="board">
+      <button class="cell" data-index="0"></button>
+      <button class="cell" data-index="1"></button>
+      <button class="cell" data-index="2"></button>
+      <button class="cell" data-index="3"></button>
+      <button class="cell" data-index="4"></button>
+      <button class="cell" data-index="5"></button>
+      <button class="cell" data-index="6"></button>
+      <button class="cell" data-index="7"></button>
+      <button class="cell" data-index="8"></button>
+    </div>
+
+    <!-- Result overlay sits inside board-wrap for positioning -->
+    <div class="result-overlay" id="resultOverlay">
+      <div class="result-emoji" id="resultEmoji"></div>
+      <div class="result-text" id="resultText"></div>
+      <div class="result-sub" id="resultSub"></div>
+      <button class="btn-play-again" id="playAgainBtn">Play Again</button>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-block x-score">
+      <div class="label">Player X</div>
+      <div class="value" id="scoreX">0</div>
+    </div>
+    <div class="score-block draw-score">
+      <div class="label">Draws</div>
+      <div class="value" id="scoreDraw">0</div>
+    </div>
+    <div class="score-block o-score">
+      <div class="label">Player O</div>
+      <div class="value" id="scoreO">0</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-reset" id="resetBtn">↺ Reset Round</button>
+    <button class="btn btn-new" id="newBtn">✦ New Game</button>
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
